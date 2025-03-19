@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -117,55 +116,57 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="section-padding bg-blue-50/50">
-      <div className="text-center max-w-3xl mx-auto mb-12">
-        <div className="inline-block mb-3 px-3 py-1 bg-blue-100/50 rounded-full">
-          <span className="text-sm font-medium text-primary">Planes para todos</span>
-        </div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-          Elige el plan que mejor se adapte a ti
-        </h2>
-        <p className="text-xl text-gray-600 mb-8">
-          Ofrecemos diferentes opciones para adaptarse a tus necesidades de preparación para entrevistas.
-        </p>
-        
-        <div className="inline-flex p-1 bg-gray-100 rounded-lg">
-          <button 
-            className={`px-4 py-2 text-sm rounded-md transition-all ${billingPeriod === 'monthly' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
-            onClick={() => setBillingPeriod('monthly')}
-          >
-            Facturación mensual
-          </button>
-          <button 
-            className={`px-4 py-2 text-sm rounded-md transition-all ${billingPeriod === 'yearly' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
-            onClick={() => setBillingPeriod('yearly')}
-          >
-            Facturación anual <span className="text-green-600 font-medium">-20%</span>
-          </button>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {plans.map((plan, index) => (
-          <div
-            key={index}
-            className="transform transition-all duration-500"
-            style={{ 
-              animationName: 'fade-in-up',
-              animationDuration: '0.5s',
-              animationFillMode: 'both',
-              animationDelay: `${index * 0.1}s`
-            }}
-          >
-            <PricingCard plan={plan} />
+    <section id="pricing" className="w-full bg-blue-50/50">
+      <div className="section-padding">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-block mb-3 px-3 py-1 bg-blue-100/50 rounded-full">
+            <span className="text-sm font-medium text-primary">Planes para todos</span>
           </div>
-        ))}
-      </div>
-      
-      <div className="mt-12 text-center">
-        <p className="text-gray-600">
-          ¿Necesitas un plan para equipos o empresas? <a href="#" className="text-primary font-medium hover:underline">Contáctanos</a> para una solución personalizada.
-        </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            Elige el plan que mejor se adapte a ti
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Ofrecemos diferentes opciones para adaptarse a tus necesidades de preparación para entrevistas.
+          </p>
+          
+          <div className="inline-flex p-1 bg-gray-100 rounded-lg">
+            <button 
+              className={`px-4 py-2 text-sm rounded-md transition-all ${billingPeriod === 'monthly' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              onClick={() => setBillingPeriod('monthly')}
+            >
+              Facturación mensual
+            </button>
+            <button 
+              className={`px-4 py-2 text-sm rounded-md transition-all ${billingPeriod === 'yearly' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              onClick={() => setBillingPeriod('yearly')}
+            >
+              Facturación anual <span className="text-green-600 font-medium">-20%</span>
+            </button>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className="transform transition-all duration-500"
+              style={{ 
+                animationName: 'fade-in-up',
+                animationDuration: '0.5s',
+                animationFillMode: 'both',
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              <PricingCard plan={plan} />
+            </div>
+          ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <p className="text-gray-600">
+            ¿Necesitas un plan para equipos o empresas? <a href="#" className="text-primary font-medium hover:underline">Contáctanos</a> para una solución personalizada.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 // Custom Icon components since Lucide React doesn't have these specific brand icons
@@ -66,34 +65,36 @@ const Integrations = () => {
   ];
 
   return (
-    <section className="section-padding bg-blue-50/30">
-      <div className="text-center max-w-3xl mx-auto mb-16">
-        <div className="inline-block mb-3 px-3 py-1 bg-blue-100/50 rounded-full">
-          <span className="text-sm font-medium text-primary">Integraciones</span>
-        </div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-          Conecta con tus herramientas favoritas
-        </h2>
-        <p className="text-xl text-gray-600">
-          Nuestra plataforma se integra perfectamente con otras aplicaciones para mejorar tu experiencia de preparación.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        {integrations.map((integration, index) => (
-          <div 
-            key={index}
-            className="transform transition-all duration-500"
-            style={{ 
-              animationName: 'fade-in-up',
-              animationDuration: '0.5s',
-              animationFillMode: 'both',
-              animationDelay: `${index * 0.1}s`
-            }}
-          >
-            <IntegrationItem {...integration} />
+    <section className="w-full bg-blue-50/30">
+      <div className="section-padding">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-block mb-3 px-3 py-1 bg-blue-100/50 rounded-full">
+            <span className="text-sm font-medium text-primary">Integraciones</span>
           </div>
-        ))}
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            Conecta con tus herramientas favoritas
+          </h2>
+          <p className="text-xl text-gray-600">
+            Nuestra plataforma se integra perfectamente con otras aplicaciones para mejorar tu experiencia de preparación.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          {integrations.map((integration, index) => (
+            <div 
+              key={index}
+              className="transform transition-all duration-500"
+              style={{ 
+                animationName: 'fade-in-up',
+                animationDuration: '0.5s',
+                animationFillMode: 'both',
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              <IntegrationItem {...integration} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

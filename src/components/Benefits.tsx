@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, BarChart2, Brain, Lightbulb, PieChart, LineChart } from 'lucide-react';
 
@@ -55,34 +54,36 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="benefits" className="section-padding bg-white">
-      <div className="text-center max-w-3xl mx-auto mb-16">
-        <div className="inline-block mb-3 px-3 py-1 bg-theme-pink/10 rounded-full">
-          <span className="text-sm font-medium text-theme-pink">Por qué elegirnos</span>
-        </div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-theme-black">
-          Prepárate con ventaja para cualquier entrevista
-        </h2>
-        <p className="text-xl text-theme-darkgray">
-          Nuestra plataforma impulsada por IA te proporciona todas las herramientas para destacar en tu próximo proceso de selección.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {benefits.map((benefit, index) => (
-          <div 
-            key={index} 
-            className="transform transition-all duration-500"
-            style={{ 
-              animationName: 'fade-in-up',
-              animationDuration: '0.7s',
-              animationFillMode: 'both',
-              animationDelay: `${index * 0.1}s`
-            }}
-          >
-            <BenefitItem {...benefit} />
+    <section id="benefits" className="w-full bg-blue-50/50">
+      <div className="section-padding">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-block mb-3 px-3 py-1 bg-theme-pink/10 rounded-full">
+            <span className="text-sm font-medium text-theme-pink">Por qué elegirnos</span>
           </div>
-        ))}
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-theme-black">
+            Prepárate con ventaja para cualquier entrevista
+          </h2>
+          <p className="text-xl text-theme-darkgray">
+            Nuestra plataforma impulsada por IA te proporciona todas las herramientas para destacar en tu próximo proceso de selección.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {benefits.map((benefit, index) => (
+            <div 
+              key={index} 
+              className="transform transition-all duration-500"
+              style={{ 
+                animationName: 'fade-in-up',
+                animationDuration: '0.7s',
+                animationFillMode: 'both',
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              <BenefitItem {...benefit} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
