@@ -113,6 +113,10 @@
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-blue-400 inline-block text-transparent bg-clip-text;
   }
+
+  .h-screen-nav {
+    height: calc(100vh - 80px);
+  }
 }
 
 /* Custom Animations */
@@ -134,4 +138,9 @@
 .hover-lift:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust the border-l size for the play button */
+.border-l-12 {
+  border-left-width: 12px;
 }

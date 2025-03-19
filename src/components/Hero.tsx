@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <div 
       ref={heroRef}
-      className="relative overflow-hidden min-h-[90vh] flex items-center justify-center"
+      className="relative overflow-hidden h-screen flex items-center justify-center"
       style={{
         background: 'radial-gradient(circle at 50% 50%, rgba(236, 246, 255, 0.8) 0%, rgba(224, 242, 254, 0.5) 45%, rgba(224, 231, 255, 0.2) 100%)'
       }}
@@ -31,17 +31,17 @@ const Hero = () => {
         <div className="absolute top-2/3 right-1/5 w-2 h-2 bg-blue-400/70 rounded-full animate-pulse delay-500"></div>
       </div>
 
-      <div className="container px-6 md:px-8 lg:px-12 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-block mb-6 px-4 py-1.5 bg-white/50 backdrop-blur-sm border border-blue-100/80 rounded-full">
+      <div className="container px-6 md:px-8 lg:px-12 relative z-10 max-w-7xl mx-auto flex flex-col justify-center h-full pt-16 md:pt-24">
+        <div className="max-w-5xl mx-auto text-center flex flex-col justify-center items-center space-y-8">
+          <div className="inline-block mb-4 px-4 py-1.5 bg-white/50 backdrop-blur-sm border border-blue-100/80 rounded-full">
             <span className="text-sm font-medium text-blue-700">La IA que potencia tu carrera profesional</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-800 inline-block text-transparent bg-clip-text">
-            Domina tu próxima entrevista con IA
+            Domina tu próxima<br className="hidden sm:block" /> entrevista con IA
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed text-balance">
+          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed text-balance">
             Simulaciones realistas, feedback instantáneo y mejora continua para destacar en cualquier proceso de selección.
           </p>
           
@@ -62,7 +62,7 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="mt-16 md:mt-24 max-w-4xl mx-auto glass-card p-6 md:p-8 animate-subtle-pulse">
+          <div className="mt-16 max-w-4xl mx-auto glass-card p-6 md:p-8 animate-subtle-pulse w-full">
             <div className="relative aspect-video rounded-lg overflow-hidden border border-blue-100/80 shadow-sm">
               <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 to-blue-100/20 flex items-center justify-center">
                 <div className="w-16 h-16 rounded-full bg-white/90 shadow-md flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">

@@ -26,7 +26,7 @@ const Index = () => {
       });
     });
 
-    // Add scroll reveal animations
+    // Add scroll reveal animations - only for sections after the hero
     const observerOptions = {
       root: null,
       rootMargin: '0px',
@@ -42,7 +42,7 @@ const Index = () => {
       });
     }, observerOptions);
 
-    document.querySelectorAll('section').forEach(section => {
+    document.querySelectorAll('section:not(#hero)').forEach(section => {
       observer.observe(section);
     });
 
