@@ -9,13 +9,13 @@ interface BenefitItemProps {
 }
 
 const BenefitItem = ({ icon, title, description }: BenefitItemProps) => (
-  <div className="flex items-start space-x-4 p-6 rounded-2xl hover-lift bg-white border border-gray-100/90 shadow-sm">
-    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-primary">
+  <div className="flex items-start space-x-4 p-6 rounded-2xl hover-lift bg-white border border-theme-pink/10 shadow-sm">
+    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-theme-pink/10 flex items-center justify-center text-theme-pink">
       {icon}
     </div>
     <div>
-      <h3 className="text-lg font-semibold mb-2 text-gray-900">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-lg font-semibold mb-2 text-theme-black">{title}</h3>
+      <p className="text-theme-darkgray">{description}</p>
     </div>
   </div>
 );
@@ -55,15 +55,15 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="benefits" className="section-padding">
+    <section id="benefits" className="section-padding bg-white">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <div className="inline-block mb-3 px-3 py-1 bg-blue-50 rounded-full">
-          <span className="text-sm font-medium text-primary">Por qué elegirnos</span>
+        <div className="inline-block mb-3 px-3 py-1 bg-theme-pink/10 rounded-full">
+          <span className="text-sm font-medium text-theme-pink">Por qué elegirnos</span>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-theme-black">
           Prepárate con ventaja para cualquier entrevista
         </h2>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl text-theme-darkgray">
           Nuestra plataforma impulsada por IA te proporciona todas las herramientas para destacar en tu próximo proceso de selección.
         </p>
       </div>

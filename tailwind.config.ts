@@ -62,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Nuevos colores personalizados
+				theme: {
+					pink: '#DE9CAB',
+					black: '#000000',
+					gray: '#CFCFCF',
+					darkgray: '#5C5C5C'
 				}
 			},
 			borderRadius: {
