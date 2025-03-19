@@ -14,6 +14,7 @@ const Hero = () => {
 
   return (
     <div 
+      id="hero"
       ref={heroRef}
       className="relative overflow-hidden h-screen flex items-center justify-center"
       style={{
@@ -32,37 +33,37 @@ const Hero = () => {
       </div>
 
       <div className="container px-6 md:px-8 lg:px-12 relative z-10 max-w-7xl mx-auto flex flex-col justify-center h-full pt-16 md:pt-24">
-        <div className="max-w-5xl mx-auto text-center flex flex-col justify-center items-center space-y-8">
-          <div className="inline-block mb-4 px-4 py-1.5 bg-white/50 backdrop-blur-sm border border-blue-100/80 rounded-full">
-            <span className="text-sm font-medium text-blue-700">La IA que potencia tu carrera profesional</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left column - Text content */}
+          <div className="flex flex-col text-left space-y-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-800 inline-block text-transparent bg-clip-text">
+              Domina tu próxima entrevista con IA
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl leading-relaxed text-balance">
+              Simulaciones realistas, feedback instantáneo y mejora continua para destacar en cualquier proceso de selección.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-white px-8 h-14 text-lg rounded-full shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all duration-300 group"
+              >
+                Empieza gratis ahora
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-gray-300 hover:bg-gray-100/50 h-14 text-lg rounded-full transition-all duration-300"
+              >
+                Ver demo
+              </Button>
+            </div>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-800 inline-block text-transparent bg-clip-text">
-            Domina tu próxima<br className="hidden sm:block" /> entrevista con IA
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed text-balance">
-            Simulaciones realistas, feedback instantáneo y mejora continua para destacar en cualquier proceso de selección.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white px-8 h-14 text-lg rounded-full shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all duration-300 group"
-            >
-              Empieza gratis ahora
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-gray-300 hover:bg-gray-100/50 h-14 text-lg rounded-full transition-all duration-300"
-            >
-              Ver demo
-            </Button>
-          </div>
-          
-          <div className="mt-16 max-w-4xl mx-auto glass-card p-6 md:p-8 animate-subtle-pulse w-full">
+          {/* Right column - Video */}
+          <div className="glass-card p-6 md:p-8 animate-subtle-pulse w-full">
             <div className="relative aspect-video rounded-lg overflow-hidden border border-blue-100/80 shadow-sm">
               <div className="absolute inset-0 bg-gradient-to-b from-blue-50/30 to-blue-100/20 flex items-center justify-center">
                 <div className="w-16 h-16 rounded-full bg-white/90 shadow-md flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
